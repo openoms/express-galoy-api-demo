@@ -1,0 +1,15 @@
+export default `
+mutation lnInvoiceCreateInput($input: LnInvoiceCreateInput!) {
+  lnInvoiceCreate(input: $input) {
+    invoice {
+      paymentRequest
+      paymentHash
+      paymentSecret
+      satoshis
+    }
+    errors {
+      message
+    }
+  }
+}
+`

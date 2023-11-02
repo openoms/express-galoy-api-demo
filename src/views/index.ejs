@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Node App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            /* Simple box shadow for some depth */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #balance {
+            font-size: 14px;
+            color: #333;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px; 
+        }
+
+        #invoiceDisplay {
+            display: none;  /* Initially hidden */
+            font-size: 14px;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-height: 300px;  /* Adjust as needed */
+            overflow-y: auto;  /* Add scroll for long content */
+            background-color: #fff;  /* White background */
+            width: 80%;  /* Use a percentage or fixed value as per your design needs */
+        }
+
+    </style>
+</head>
+
+<body>
+    <button onclick="displayBalance()">Show Balance</button>
+    <div id="balance" style="display:none;">$0.00</div>
+
+    <button id="showInvoiceBtn">Create Invoice</button>
+    <!-- Hidden Invoice Form -->
+    <div id="invoiceForm" style="display: none;">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+        <button onclick="createInvoice()">Create</button>
+    </div>
+
+    <!-- Placeholder for the invoice -->
+    <div id="invoiceDisplay"></div>
+  
+    <script src="/app.js"></script>
+
+</body>
+
+</html>
