@@ -12,4 +12,4 @@ mutation lnInvoiceCreateInput($input: LnInvoiceCreateInput!) {
     }
   }
 }
-`
+`;

@@ -1,5 +1,6 @@
 { pkgs }: {
     deps = [
+		pkgs.nodePackages.prettier
       pkgs.qrencode.bin
         pkgs.yarn
         pkgs.esbuild
