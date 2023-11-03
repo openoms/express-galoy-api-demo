@@ -46,8 +46,8 @@ app.post("/generate-qrcode", async (req: Request, res: Response) => {
   const invoice = req.body.invoice;
 
   try {
-    const qrCodeDataUrl = await generateQRCode(invoice);
-    res.json({ qrCodeDataUrl });
+    const qrCodeDataURL = await generateQRCode(invoice);
+    res.json({ qrCodeDataURL });
   } catch (err) {
     console.error("Error generating QR Code:", err);
     res.status(500).send("Error generating QR Code");

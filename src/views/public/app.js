@@ -47,9 +47,9 @@ const createInvoice = async () => {
       throw new Error(`Server responded with status: ${qrCodeResponse.status}`);
     }
 
-    const { qrCodeDataUrl } = await qrCodeResponse.json();
+    const { qrCodeDataURL } = await qrCodeResponse.json();
     const qrCodeDisplay = document.getElementById("qrCodeDisplay");
-    qrCodeDisplay.innerHTML = `<img src="${qrCodeDataUrl}" alt='QR code'>`;
+    qrCodeDisplay.innerHTML = `<img src="${qrCodeDataURL}" alt='QR code'>`;
     qrCodeDisplay.style.display = "block";
 
     // Reset form field value and hide the invoice form
