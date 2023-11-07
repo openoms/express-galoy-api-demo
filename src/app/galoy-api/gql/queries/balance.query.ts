@@ -1,12 +1,3 @@
 export default `
-query Me {
-  me {
-    defaultAccount {
-      wallets {
-        walletCurrency
-        balance
-      }
-    }
-  }
-}
+// Fill in the me query to get 'walletCurrency' and 'balance'
 `;
