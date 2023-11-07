@@ -4,8 +4,9 @@ import lnInvoiceCreateMutation from "./gql/mutations/ln-invoice-create.mutation"
 import balanceQuery from "./gql/queries/balance.query";
 import walletIdsQuery from "./gql/queries/wallet-ids.query";
 
-// const GALOY_ENDPOINT = "https://api.staging.galoy.io/graphql"; // for staging (signet)
-const GALOY_ENDPOINT = "https://api.blink.sv/graphql";
+// For staging (signet) use: "https://api.staging.galoy.io/graphql" 
+// For mainnet use: "https://api.blink.sv/graphql"
+const GALOY_ENDPOINT = process.env.galoy_endpoint;
 //const TOKEN = process.env.auth_token; // legacy token
 const TOKEN = process.env.api_key; // API key from the Blink Dashboard
 const HEADERS = {
