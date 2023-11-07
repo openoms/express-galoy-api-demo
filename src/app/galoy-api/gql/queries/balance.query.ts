@@ -1,13 +1,12 @@
 export default `
-query me {
-    me {
-        username
-        defaultAccount {
-            wallets {
-              walletCurrency
-              balance
-            }
-        }
+query Me {
+  me {
+    defaultAccount {
+      wallets {
+        walletCurrency
+        balance
+      }
     }
+  }
 }
 `;

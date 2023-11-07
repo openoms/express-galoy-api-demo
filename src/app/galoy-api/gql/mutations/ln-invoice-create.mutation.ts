@@ -1,5 +1,5 @@
 export default `
-mutation lnInvoiceCreateInput($input: LnInvoiceCreateInput!) {
+mutation LnInvoiceCreate($input: LnInvoiceCreateInput!) {
   lnInvoiceCreate(input: $input) {
     invoice {
       paymentRequest
